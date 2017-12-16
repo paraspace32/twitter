@@ -19,7 +19,7 @@
         <td><%= user.id %></td>
         <td><%= user.email %></td>
         <td><%= user.bio %></td>
-        <% if @check.present? %>
+        <% if !@check.present? %>
           <td><%= link_to 'Follow', follow_user_path(user.id), method: :post %></td>
         <% else %>
           <td> Following </td>  
